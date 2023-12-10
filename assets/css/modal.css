@@ -1,0 +1,308 @@
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+.modal {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContainer {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+#modalContent {
+  height: 100%;
+}
+
+#modalHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem 0 2rem;
+}
+.detailPokemon {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 2rem 0 2rem;
+}
+.detailPokemon .number {
+  color: #fff;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  font-size: 0.8rem;
+}
+.detailPokemon .name {
+  font-size: 1.5rem;
+}
+
+.detailPokemonImgContainer {
+  position: relative;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+
+  background-image: url("../img/Pokeball-transparent.svg");
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: right 29px center;
+}
+
+.detailPokemonImg {
+  width: 200px;
+  position: absolute;
+  bottom: -29px;
+  z-index: 2;
+}
+
+.modalContentHeader .types {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem 0 2rem;
+}
+.modalContentHeader .types .type {
+  width: fit-content;
+}
+.modalContentBody {
+  background-color: #fff;
+  border-radius: 1rem 1rem 0 0;
+  height: 100%;
+  width: 100%;
+}
+.modalContentBodyNav {
+  padding-top: 1rem;
+}
+.modalContentBodyNav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
+  color: rgba(105, 105, 105, 0.719);
+  list-style: none;
+  font-size: small;
+  margin: 6px 0 0 0;
+}
+.modalContentBodyNav ul li {
+  cursor: pointer;
+}
+.active {
+  border-bottom: 2px solid blue;
+}
+
+.modalContentBodyAbout {
+  padding: 0.5rem 2rem 0 2rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+.modalContentBodyAbout h4 {
+  margin: 0.5rem 0;
+}
+
+.modalContentBodyEvolution {
+  padding: 0.5rem 2rem 0 2rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.modalContentBodyMoves {
+  padding: 0 2rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.modalContentBodyBaseStats {
+  padding: 0.5rem 2rem 0 2rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-gap: 1rem;
+  font-size: small;
+  padding: 0.5rem;
+}
+
+.baseStats {
+  display: grid;
+  grid-template-columns: 70px 20px 1fr;
+  grid-gap: 1rem;
+  font-size: small;
+  align-items: center;
+}
+.statBarValue {
+  position: absolute;
+}
+.indice {
+  margin: 0;
+  color: #0000006e;
+}
+.baseStats .indice {
+  text-transform: uppercase;
+}
+.info {
+  margin: 0;
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.text {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: #000000a4;
+  font-size: small;
+  padding: 0.5rem;
+}
+
+.statBar {
+  width: 182px;
+  height: 4px;
+  background: #0000002a;
+}
+.color-red {
+  background-color: red;
+}
+.evolution {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #000;
+}
+.evolution h4 {
+  margin: 0;
+}
+.evolutionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.evolutionImgContainer {
+  position: relative;
+}
+.evolutionImgContainer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url("../img/Pokeball.svg");
+  background-size: 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.evolutionImg {
+  width: 110px;
+  position: relative;
+  z-index: 5;
+}
+.evolutionName {
+  text-transform: capitalize;
+
+  margin: 0;
+  text-align: center;
+}
+.evolutionLvl {
+  color: #000;
+  font-weight: 600;
+}
+.evolutionItem {
+  font-size: 0.625rem;
+}
+.evolutionLvlContainer i {
+  color: #00000071;
+}
+.evolutionLvlContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalContentBodyMoves .moves,
+.movesHeader {
+  display: grid;
+  grid-template-columns: 40px 140px 1fr 1fr 1fr;
+  text-align: center;
+}
+.movesHeader {
+  position: fixed;
+  background-color: #fff;
+  z-index: 10;
+  padding-top: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.moves p {
+  color: #000;
+}
+
+@media screen and (min-width: 380px) {
+  .modalContainer {
+    background-color: #0000009d;
+  }
+
+  .modal {
+    color: #fff;
+    width: 380px;
+    height: 98%;
+    margin: 2% auto;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .modal {
+    color: #fff;
+    width: 400px;
+    height: 90%;
+    margin: 5% auto;
+    border-radius: 1rem;
+  }
+
+  .modalContentBody {
+    border-radius: 1rem;
+    height: 398px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .modal {
+    color: #fff;
+    width: 400px;
+    height: 681px;
+    margin: 1% auto;
+    border-radius: 1rem;
+  }
+
+  #modalContent {
+    height: 344px;
+  }
+  .modalContentBody {
+    border-radius: 1rem;
+  }
+
+  .modalContentBodyEvolution,
+  .modalContentBodyAbout,
+  .modalContentBodyBaseStats,
+  .modalContentBodyMoves {
+    height: 335px;
+  }
+}
